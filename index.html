@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/x-elements.css" />
+    <script type="module" src="/src/main.js"></script>
+    <title>X Elements | Showcase</title>
+  </head>
+  <body is="x-document">
+    <section>
+      <h1 is="x-h2">Typography</h1>
+      <h1 is="x-h1">Level 1 Heading</h1>
+      <h2 is="x-h2">Level 2 Heading</h2>
+      <h3 is="x-h3">Level 3 Heading</h3>
+      <h4 is="x-h4">Level 4 Heading</h4>
+
+      <p is="x-p">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut mollis
+        nunc. Quisque fringilla ullamcorper magna. Suspendisse ac sapien in
+        metus efficitur tincidunt eget quis enim. Praesent erat felis, aliquam
+        laoreet gravida et, molestie id diam. Praesent vestibulum, neque et
+        pretium rutrum, purus tortor laoreet erat, at varius diam metus sit amet
+        lorem.
+      </p>
+    </section>
+    <section>
+      <h1 is="x-h2">Buttons</h1>
+      <x-btn><button>Default Button</button></x-btn>
+      <x-btn><button data-variant="outlined">Outlined Button</button></x-btn>
+      <x-btn><button disabled>Disabled Button</button></x-btn>
+      <x-btn>
+        <button data-variant="outlined" disabled>
+          Disabled Outlined Button
+        </button>
+      </x-btn>
+      <x-btn>
+        <button>
+          <svg
+            width="19"
+            height="18"
+            viewBox="0 0 19 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.0652 8.50373V17.0037M9.0652 17.0037L12.0652 14.0037M9.0652 17.0037L6.0652 14.0037M5.0652 4.03973C5.81315 4.14785 6.50601 4.49516 7.0402 5.02973M14.5652 11.0037C16.0842 11.0037 17.0652 9.77273 17.0652 8.25373C17.0651 7.65234 16.868 7.06756 16.5039 6.58893C16.1397 6.11031 15.6288 5.76424 15.0492 5.60373C14.96 4.48218 14.4952 3.42349 13.7299 2.59882C12.9646 1.77414 11.9435 1.23169 10.8317 1.05915C9.71993 0.886616 8.58246 1.09408 7.60319 1.64802C6.62392 2.20195 5.8601 3.06996 5.4352 4.11173C4.54063 3.86375 3.58418 3.9813 2.77628 4.43851C1.96837 4.89572 1.37518 5.65515 1.1272 6.54972C0.879224 7.4443 0.996772 8.40074 1.45399 9.20865C1.9112 10.0166 2.67063 10.6097 3.5652 10.8577"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Icon Button
+        </button>
+      </x-btn>
+      <x-btn>
+        <button data-variant="outlined">
+          <svg
+            width="19"
+            height="18"
+            viewBox="0 0 19 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.0652 8.50373V17.0037M9.0652 17.0037L12.0652 14.0037M9.0652 17.0037L6.0652 14.0037M5.0652 4.03973C5.81315 4.14785 6.50601 4.49516 7.0402 5.02973M14.5652 11.0037C16.0842 11.0037 17.0652 9.77273 17.0652 8.25373C17.0651 7.65234 16.868 7.06756 16.5039 6.58893C16.1397 6.11031 15.6288 5.76424 15.0492 5.60373C14.96 4.48218 14.4952 3.42349 13.7299 2.59882C12.9646 1.77414 11.9435 1.23169 10.8317 1.05915C9.71993 0.886616 8.58246 1.09408 7.60319 1.64802C6.62392 2.20195 5.8601 3.06996 5.4352 4.11173C4.54063 3.86375 3.58418 3.9813 2.77628 4.43851C1.96837 4.89572 1.37518 5.65515 1.1272 6.54972C0.879224 7.4443 0.996772 8.40074 1.45399 9.20865C1.9112 10.0166 2.67063 10.6097 3.5652 10.8577"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Outlined Icon Button
+        </button>
+      </x-btn>
+    </section>
+    <section>
+      <h1 is="h2">Forms</h1>
+
+      <x-form-field style="margin-bottom: var(--sp-16)">
+        <label for="simple">An Input</label>
+        <input type="text" id="simple" placeholder="A simple input" />
+      </x-form-field>
+
+      <x-form-field>
+        <label for="input-1" data-error>An input with errors</label>
+        <input
+          type="text"
+          id="input-1"
+          data-error
+          value="Input field with errors"
+        />
+        <p data-helper>Something went wrong during validation</p>
+      </x-form-field>
+    </section>
+  </body>
+</html>
